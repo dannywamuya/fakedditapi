@@ -117,7 +117,10 @@ public class AuthService {
     }
 
     public Object currentlyLoggedIn() {
-        return userMapper.toResponse(authStatus.getUser());
+        if (authStatus.getUser().getUserId() != null) {
+          return userMapper.toResponse(authStatus.getUser());
+        }
+        return null;
     }
 
     public Object getUserByUsername(String username) {
