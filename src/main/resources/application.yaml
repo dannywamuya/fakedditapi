@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fakeddit
+    username: postgres
+    password: 1234admin
+    platform: postgresql
+    autoCommit: false
+    initialization:
+      mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+      properties:
+        hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.mailtrap.io
+    port: 25
+    username: af86f75e01531c
+    password: f1424c3d6087ae
+    protocol: smtp
